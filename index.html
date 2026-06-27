@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nyuki — データを、決断が動く形に</title>
+<style>
+  :root{
+    --bg:#0e0f13; --panel:#16181f; --line:#262a35;
+    --fg:#e9ebf0; --mut:#9aa0b0; --accent:#7c9cff; --accent2:#5ee0c0;
+    --maxw:980px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  header{padding:92px 0 52px}
+  .eyebrow{color:var(--accent2);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+  h1{font-size:clamp(30px,5vw,48px);line-height:1.28;font-weight:700;letter-spacing:.01em}
+  .lead{margin-top:22px;font-size:clamp(15px,2.1vw,17.5px);color:var(--mut);max-width:660px}
+  .sig{display:block;margin-top:14px;color:#6f7688;font-size:14px}
+  .meta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .tag{border:1px solid var(--line);color:var(--fg);padding:6px 12px;border-radius:999px;font-size:13px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+  .h2note{color:#6f7688;font-size:13px;margin-bottom:26px}
+  /* cases */
+  .cases{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .case{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .case b{display:block;font-size:15.5px;margin-bottom:7px}
+  .case p{color:var(--mut);font-size:14px}
+  /* can-do */
+  .cando{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .cando div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .cando b{display:block;font-size:15px;margin-bottom:4px}
+  .cando span{color:var(--mut);font-size:13.5px}
+  /* works */
+  .work{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center;padding:22px 0}
+  .work:nth-child(odd) .shot{order:2}
+  .shot{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block}
+  .work h3{font-size:19px;font-weight:700;margin-bottom:5px}
+  .work .role{color:var(--accent);font-size:12.5px;letter-spacing:.03em;margin-bottom:10px}
+  .work p{color:var(--mut);font-size:14px}
+  .work .stack{margin-top:12px;font-size:12px;color:#727a8d}
+  .contact a{color:var(--accent);text-decoration:none}
+  footer{padding:48px 0 72px;color:#5a6072;font-size:12.5px;border-top:1px solid var(--line)}
+  @media(max-width:680px){
+    .cases,.cando{grid-template-columns:1fr}
+    .work{grid-template-columns:1fr;gap:14px}
+    .work:nth-child(odd) .shot{order:0}
+    header{padding:60px 0 38px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Nyuki — Data × AI × Visualization</div>
+    <h1>散らばったデータを、<br>決断が動く形に。</h1>
+    <p class="lead">
+      BtoB SaaS の CS・営業・マーケに散らばったデータを統合し、現場が「その場で決められる」
+      ダッシュボード・シミュレーター・AI 業務自動化を、設計から実装・運用まで一人で通します。
+      AI は「ツール利用」ではなく業務フロー再構築のレベルで使います。
+      <span class="sig">— 決められない場所に、決める材料を作って置く人。</span>
+    </p>
+    <div class="meta">
+      <span class="tag">ダッシュボード / BI</span>
+      <span class="tag">AI 業務自動化</span>
+      <span class="tag">データ統合・可視化</span>
+      <span class="tag">RevOps / CS Ops</span>
+    </div>
+  </header>
+
+  <!-- ===== 実績（主役） ===== -->
+  <section id="cases">
+    <div class="h2">実績</div>
+    <div class="h2note">守秘のため、企業・数値が特定できない形に抽象化しています。</div>
+    <div class="cases">
+      <div class="case">
+        <b>横断ダッシュボードを、全社の意思決定基盤に</b>
+        <p>BtoB SaaS で CS・営業・マーケを横断するダッシュボードを設計・構築。現場の確認業務から経営の戦略立案までに組み込まれ、全社で運用される状態に到達。</p>
+      </div>
+      <div class="case">
+        <b>「決められない価格会議」を、その場の即決に</b>
+        <p>漠然とした不安で止まっていた価格検討を、シミュレーターで「その場で決められる」状態に。会議が即決で終わるようになった。</p>
+      </div>
+      <div class="case">
+        <b>受注を後押しする提案ツール</b>
+        <p>顧客の稟議を通すための受注支援ツールを、設計思想から構築。営業が「前に出る」ための材料を用意。</p>
+      </div>
+      <div class="case">
+        <b>AI 活用を部署横断で牽引／外部評価</b>
+        <p>社内の AI 活用の中心人物として認識される立ち位置に。AI × RevOps 領域の外部専門家から「最先端」と評価、複数社へのレポート説明でも高評価。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== できること（サービス） ===== -->
+  <section id="cando">
+    <div class="h2">できること</div>
+    <div class="h2note">要件が固まっていない段階から入って、一緒に形にできます。</div>
+    <div class="cando">
+      <div><b>ダッシュボード / BI 構築</b><span>要件整理 → 設計 → 実装 → 運用。データ可視化で意思決定を動かす。</span></div>
+      <div><b>AI 業務自動化</b><span>AI を業務フロー再構築のレベルで使い、手作業をフローごと設計し直す。</span></div>
+      <div><b>データ統合・可視化</b><span>社内外に散らばったデータを繋ぎ込み、その現場専用の「意味」を作る。</span></div>
+      <div><b>意思決定支援ツール</b><span>シミュレーター・内部ツールなど、現場が「その場で決められる」形に。</span></div>
+    </div>
+  </section>
+
+  <!-- ===== 個人プロジェクト（能力の証拠） ===== -->
+  <section id="works">
+    <div class="h2">個人プロジェクト</div>
+    <div class="h2note">公開データで作ったデモを含む自主制作。クライアント業務とは別に「設計から実装まで一人で作れる」裏付けです。</div>
+
+    <div class="work">
+      <div class="shot"><img src="img/myaku.png" alt="myaku — 公開データの3Dデータ可視化"></div>
+      <div>
+        <h3>myaku<span style="color:var(--mut);font-weight:400"> — 脈</span></h3>
+        <div class="role">公開データを統合する 3D データ可視化基盤</div>
+        <p>政府オープンデータ（gBizINFO 等）を統合し、企業の関係性・業種・地域を 3D 空間で探索できるツール。<b style="color:var(--fg);font-weight:600">業務で作るダッシュボードと同じ「データ → 意味 → 可視化」を、顧客データを使わず公開データで形にしたデモです。</b></p>
+        <div class="stack">公開データ統合 / 3D 可視化 / WebGL</div>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="shot" style="background:#fff"><img src="img/murmuration.png" alt="murmuration — AI エージェント可観測性プラットフォーム"></div>
+      <div>
+        <h3>murmuration</h3>
+        <div class="role">AI エージェント可観測性プラットフォーム</div>
+        <p>複数の AI エージェントが群れ（murmuration）のように動く様子を、タイリング GUI で一目に。複雑で見えない情報を「判断できる形」に可視化する、業務ダッシュボードのツール版。</p>
+        <div class="stack">Tauri 2.1 / React 18 / MCP</div>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="shot"><img src="img/chocodrop.png" alt="ChocoDrop — AI×3D ブラウザツール"></div>
+      <div>
+        <h3>ChocoDrop</h3>
+        <div class="role">AI 画像生成 × 3D × 自然言語インターフェース</div>
+        <p>テキストや音声で、Three.js の 3D シーンに即座にオブジェクトを生成・配置するブラウザツール。AI を UI に溶かし込む実装。</p>
+        <div class="stack">Three.js / MCP / AI 画像生成</div>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="shot"><img src="img/emerald.png" alt="rt-sketches — emerald（リアルタイム生成アート）"></div>
+      <div>
+        <h3>rt-sketches <span style="color:var(--mut);font-weight:400">— emerald</span></h3>
+        <div class="role">リアルタイム・ジェネレーティブアート（WebGL / GLSL）</div>
+        <p>音が映像を駆動する、リアルタイム生成のビジュアル。データを意味に変えるのと同じ手で、美しさも設計できるという証明。</p>
+        <div class="stack">WebGL / GLSL / 音響リアクティブ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="h2">Contact</div>
+    <p>業務委託・副業のご相談、お気軽に。データ × AI × 可視化の領域で、設計から実装・運用まで。リモート / 平日夜・土日で稼働できます。</p>
+    <p style="margin-top:10px">
+      ✉ <a href="mailto:nyuki.ai0201x@gmail.com">nyuki.ai0201x@gmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/nyukicorn" target="_blank" rel="noopener">GitHub @nyukicorn</a>
+    </p>
+  </section>
+
+  <footer>© 2026 Nyuki — Data × AI × Visualization</footer>
+
+</div>
+</body>
+</html>
